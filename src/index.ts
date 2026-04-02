@@ -74,7 +74,7 @@ export default {
         const result = await env.DB.prepare(
           "INSERT INTO frases (texto, etiquetas) VALUES (?, ?) RETURNING *"
         )
-          .bind(body.texto, body.etiquetas ?? null)
+          .bind(body.texto, body.etiquetas?.toLowerCase() ?? null)
           .first<Frase>();
         return new Response(JSON.stringify(result), { status: 201, headers });
       }
@@ -92,7 +92,7 @@ export default {
         )
           .bind(
             body.texto ?? existing.texto,
-            body.etiquetas ?? existing.etiquetas,
+            body.etiquetas?.toLowerCase() ?? existing.etiquetas,
             id
           )
           .first<Frase>();
