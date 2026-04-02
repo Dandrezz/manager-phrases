@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Frases</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mis Frases</h1>
+    </header>
+
+    <section class="toolbar">
+      <input type="text" id="buscador" placeholder="Buscar frases..." autocomplete="off" />
+      <input type="text" id="filtro-etiqueta" placeholder="Filtrar por etiqueta..." autocomplete="off" />
+      <button id="btn-nueva" class="btn-primary">+ Nueva frase</button>
+    </section>
+
+    <div id="lista" class="lista"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <h2 id="modal-titulo">Nueva frase</h2>
+      <textarea id="input-texto" placeholder="Escribe la frase..." rows="4"></textarea>
+      <input type="text" id="input-etiquetas" placeholder="Etiquetas (separadas por coma)" autocomplete="off" />
+      <div class="modal-actions">
+        <button id="btn-cancelar" class="btn-secondary">Cancelar</button>
+        <button id="btn-guardar" class="btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

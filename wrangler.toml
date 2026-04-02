@@ -1,0 +1,8 @@
+name = "frases-backend"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "frases-db"
+database_id = "6aec0a88-3f12-4767-9adc-2ad7d5919cea"
